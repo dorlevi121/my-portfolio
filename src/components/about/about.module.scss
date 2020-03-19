@@ -1,0 +1,9 @@
+.About { 
+    animation-name: animate;
+    animation-duration: .10s;
+  
+    @keyframes animate {
+      from { opacity:0}
+      to { opacity:1}
+    }
+}
