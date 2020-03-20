@@ -1,0 +1,23 @@
+@import "../../App.module.scss";
+
+.Projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  color: $primary-color;
+
+  .Arrow {
+    align-self: auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.5;
+    order: unset;
+    transition: all 0.3s;
+    color: white;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

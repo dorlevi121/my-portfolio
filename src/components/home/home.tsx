@@ -66,12 +66,20 @@ export default class Home extends Component {
         </div>
 
         <div className={homeStyle.SocialMedia}>
-          <div className={homeStyle.githubIcon}>
+          <a
+            href="https://github.com/dorlevi121"
+            target="_blank"
+            className={homeStyle.githubIcon}
+          >
             <FaGithub size="1.7rem" />
-          </div>
-          <div className={homeStyle.linkedinIcon}>
+          </a>
+          <a
+            href="https://linkedin.com/in/dorlevi121"
+            target="_blank"
+            className={homeStyle.linkedinIcon}
+          >
             <FaLinkedin size="1.7rem" />
-          </div>
+          </a>
         </div>
       </div>
     );

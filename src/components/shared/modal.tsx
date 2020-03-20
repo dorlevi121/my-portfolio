@@ -19,7 +19,7 @@ const Modal: React.FC<OwnProps> = props => {
         </div>
       </div>
       <div className={modalStyle.Content}>
-        <p>{props.children}</p>
+        {props.children}
       </div>
     </div>
   );
