@@ -26,7 +26,6 @@ const Contact: React.FC = props => {
 
   return (
     <div>
-      const {status} = this.state;
       <Modal title="mail me">
         <div className={contactStyle.Form}>
           <form
