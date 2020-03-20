@@ -8,7 +8,7 @@ import Projects from "./components/projects/projects";
 
 function App() {
   return (
-    <div>
+    <div className={appStyle.App}>
       <Switch>
         {/* Home */}
         <Route exact path="/" component={Home} />

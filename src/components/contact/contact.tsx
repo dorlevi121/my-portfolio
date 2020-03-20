@@ -25,7 +25,7 @@ const Contact: React.FC = props => {
   };
 
   return (
-    <div>
+    <div className={contactStyle.Contact}>
       <Modal title="mail me">
         <div className={contactStyle.Form}>
           <form

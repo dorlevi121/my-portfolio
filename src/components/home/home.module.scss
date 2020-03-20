@@ -2,7 +2,7 @@
 
 .Home {
   margin-top: 15%;
-
+  
   & .Name {
     & p {
       text-align: center;
@@ -13,7 +13,6 @@
       animation: text-animation 3s ease-in-out;
       
       @media (max-width: 900px) {
-        animation: none;
         letter-spacing: 2px;
         font: 2rem "Roboto", sans-serif;
       }
@@ -32,9 +31,8 @@
       animation: hr-animation 3s ease;
 
       @media (max-width: 900px) {
-        animation: none;
-        width: 40vw;
-        height: 1px;
+        width: 80vw;
+        height: 1.3px;
       }
     }
   }
@@ -52,9 +50,10 @@
       filter: blur(0.8px);
     }
 
-    @media (max-width: 900px) {
-      font: 0.8rem "Roboto", sans-serif;
+    @media (max-width: 600px) {
+      font: 0.5rem "Roboto", sans-serif;
       height: 1px;
+      letter-spacing: 2px;
     }
   }
 
@@ -115,12 +114,20 @@
     cursor: pointer;
     @include primary-color;
 
+    @media (max-width: 600px) {
+      margin-top: 10%;
+    }
+
     & .githubIcon {
       margin-right: 1%;
       transition: all 0.3s ease-in-out;
       color: $primary-color;
       &:hover {
         color: #333;
+      }
+
+      @media (max-width: 600px) {
+        margin-right: 3%;
       }
     }
 

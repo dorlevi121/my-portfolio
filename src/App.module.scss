@@ -3,3 +3,10 @@
 }
 
 $primary-color: #FFFFF0;
+
+.App {
+  @media (max-width: 600px) {
+    margin: 40% auto;
+  }
+
+}

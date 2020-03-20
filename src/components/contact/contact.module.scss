@@ -1,6 +1,11 @@
 @import "../../App.module.scss";
-
+.Cotact {
+  @media (max-width: 600px) {
+    margin: 50% auto;
+  }
+}
 form {
+  
   & .FormGroup {
     &:not(:last-child) {
       margin-bottom: 1rem;
@@ -93,7 +98,7 @@ form {
 
     @media (max-width: 600px) {
       height: 20px;
-      width: 50px;
+      width: 60px;
       font-size: .8rem;
       margin-left: 30%;
       letter-spacing: 1px;

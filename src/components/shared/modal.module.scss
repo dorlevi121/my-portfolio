@@ -11,6 +11,10 @@
   overflow: auto;
   background-color: rgba(59, 43, 43, 0.8);
   animation: open-modal-animation 1s ease-in-out;
+  @media (max-width: 600px) {
+    width: 60vw;
+    height: 55vh;
+  }
 
   &::-webkit-scrollbar {
     width: 0.5em;
@@ -42,6 +46,10 @@
       font-weight: 300;
       font-size: 1.3rem;
       text-transform: uppercase;
+      @media (max-width: 600px) {
+        font-size: 1rem;
+      }
+      
     }
     & .Close {
       & a {
@@ -50,6 +58,9 @@
         font-size: 2.3rem;
         font-weight: 100;
         transition: all 0.3s ease-in-out;
+        @media (max-width: 600px) {
+          font-size: 2rem;
+        }
       }
 
       & :hover {
@@ -69,6 +80,10 @@
         rgba(255, 255, 255, 0)
       );
       animation: hr-animation 4s alternate 1;
+
+      @media (max-width: 600px) {
+        width: 25vw;
+      }
     }
   }
 
