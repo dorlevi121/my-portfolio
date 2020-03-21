@@ -11,7 +11,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-
+&::selection {
+  background-color: #7ed56f;
+  color: #fff; }
 
 }
 
