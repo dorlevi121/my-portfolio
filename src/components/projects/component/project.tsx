@@ -1,7 +1,8 @@
 import React from "react";
 import projectStyle from "./project.module.scss";
-import { PROJECTS } from "../../../assets/projects/my-projects";
 import { FaGithub } from "react-icons/fa";
+import { FiLink } from "react-icons/fi";
+
 
 interface OwnProps {
   project: any;
@@ -40,6 +41,17 @@ const Project: React.FC<OwnProps> = props => {
       >
         <FaGithub size="1.5rem" color="white" />
       </a>
+
+      {props.project.url !== '' && 
+        <a
+        className={projectStyle.Github}
+        href={props.project.url}
+        target="_blank"
+        style={{marginLeft: '3%'}}
+      >
+        <FiLink size="1.5rem" color="white" />
+      </a>
+      }
     </div>
   );
 };

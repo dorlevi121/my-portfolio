@@ -1,116 +1,145 @@
 @import "../../App.module.scss";
-.Cotact {
+
+.Contact {
   @media (max-width: 600px) {
     margin: 50% auto;
   }
-}
-form {
-  
-  & .FormGroup {
-    &:not(:last-child) {
-      margin-bottom: 1rem;
+
+  & form {
+    margin-top: 5%;
+    & :nth-child(4) {
+      margin-top: 3%;
     }
 
-    & label {
-      display: block;
-      margin-bottom: 2px;
-      color: rgba($primary-color, 1);
-      font-size: 0.9rem;
+    & .FormGroup {
+      margin-top: 5%;
 
-      @media (max-width: 600px) {
-        font-size: 0.8rem;
-      }
-    }
-
-    & input {
-      border-radius: 5px;
-      background-color: rgba($primary-color, 0.9);
-      border: none;
-      border-bottom: 3px solid transparent;
-      box-shadow: 5px 5px 0.5rem rgba(0, 0, 0, 0.5);
-      display: block;
-      height: 4vh;
-      width: 15vw;
-      padding-left: 5px;
-
-      @media (max-width: 600px) {
-        height: 4vh;
-        width: 50vw;
+      & input,
+      label,
+      span,
+      textarea {
+        display: block;
+        margin: 10px;
+        padding: 5px;
+        border: none;
+        font-size: 1rem;
+        font-family: inherit;
+        color: $primary-color;
       }
 
-      &::placeholder {
-        padding-left: 3px;
-        opacity: 1;
-        transition: all 0.3s ease-in-out;
+      & input:focus,
+      textarea:focus {
+        outline: 0;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
       }
-      &:focus {
-        &::placeholder {
-          opacity: 0;
-          transition: all 0.3s ease-in-out;
+
+      & input.Question,
+      textarea.Question {
+        filter: grayscale(100%) brightness(110%);
+        font-weight: 300;
+        border-radius: 5px;
+        margin: 0;
+        border: none;
+        width: 50%;
+        background: rgba($color: $primary-color, $alpha: 0.7);
+        transition: padding-top 0.3s ease, margin-top 0.2s ease,
+          box-shadow 0.3s ease;
+        overflow: hidden;
+      }
+
+      & textarea.Question {
+        height: 30%;
+      }
+
+      & input.Question + label,
+      textarea.Question + label {
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: 0px;
+      }
+
+      input.Question:focus + label > span,
+      input.Question:valid + label > span {
+        top: -53px;
+        color: $primary-color;
+      }
+
+      textarea.Question:focus + label > span,
+      textarea.Question:valid + label > span {
+        top: -73px;
+        color: $primary-color;
+      }
+
+      input.Question:valid,
+      textarea.Question:valid {
+        color: #333;
+      }
+
+      input.Question:not([value=""]) + label > span {
+        z-index: 1000;
+        font-size: 1rem;
+        top: -53px;
+        color: $primary-color;
+      }
+
+      textarea.Question:not(:empty) + label > span {
+        z-index: 1000;
+        font-size: 1rem;
+        top: -73px;
+        color: $primary-color;
+      }
+
+      input.Question + label > span,
+      textarea.Question + label > span {
+        font-weight: 500;
+        margin: 0;
+        position: absolute;
+        color: #333;
+        font-size: 1rem;
+        top: -30px;
+        left: 0px;
+        z-index: 1;
+        -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+        transition: top 0.3s ease, font-size 0.2s ease, color 0.2s ease;
+      }
+
+      textarea.Question + label > span {
+        top: -50px;
+      }
+
+      @-webkit-keyframes appear {
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes appear {
+        100% {
+          opacity: 1;
         }
       }
     }
-
-    & textarea {
-      border-radius: 5px;
-      background-color: rgba($primary-color, 0.9);
-      border: none;
-      border-bottom: 3px solid transparent;
-      box-shadow: 5px 5px 0.5rem rgba(0, 0, 0, 0.5);
-      display: block;
-      height: 12vh;
-      width: 15vw;
-      padding-left: 5px;
-
-      @media (max-width: 600px) {
-        height: 10vh;
-        width: 50vw;
+    & .Button {
+      & button {
+        margin-top: 5%;
+        background: none;
+        border: 1px solid;
+        border-radius: 5px;
+        color: #333;
+        padding: 13px 26px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
       }
 
-      &::placeholder {
-        padding-left: 3px;
-        opacity: 1;
-        transition: all 0.3s ease-in-out;
+      & :hover {
+        color: $primary-color;
       }
-      &:focus {
-        &::placeholder {
-          opacity: 0;
-          transition: all 0.3s ease-in-out;
-        }
-      }
-    }
-  }
-
-  & button {
-    font-family: inherit;
-    font-size: inherit;
-    background-color: rgba(59, 43, 43, 0);
-    color: rgba($primary-color, 1);
-    border: 1.4px solid $primary-color;
-    letter-spacing: 1px;
-    height: 40px;
-    text-align: center;
-    width: 100px;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    outline: none;
-
-    @media (max-width: 600px) {
-      height: 20px;
-      width: 60px;
-      font-size: .8rem;
-      margin-left: 30%;
-      letter-spacing: 1px;
-    }
-
-    &:hover {
-      color: black;
-      background: $primary-color;
-    }
-
-    &:active {
-      letter-spacing: 2px;
     }
   }
 }

@@ -16,7 +16,7 @@ export const PROJECTS = [
         desc: "The system includes a meal reservation system, queue management, kitchen positions, shipping, stock, and restaurant budget.",
         img: 'http://up419.siz.co.il/up3/jyhjtjtohynq.jpg',
         github: 'https://github.com/dorlevi121/Restaurant-management-system',
-        url: ''
+        url: 'https://restaurant-management-system.netlify.com/'
     },
 
     {
@@ -48,7 +48,7 @@ export const PROJECTS = [
         desc: "I implemented all the rules of the game, redo and undo options.",
         img: 'https://camo.githubusercontent.com/0d0f3c113a17c7634a67dcb8f9bc64b45064bd5a/687474703a2f2f692e7069636173696f6e2e636f6d2f70696338392f63306239313565353263613537393331616532306662636165633836303836632e676966',
         github: 'https://github.com/dorlevi121/Checkers-Game',
-        url: ''
+        url: 'https://checkers-react.netlify.com/'
     },
 
     {
@@ -58,7 +58,7 @@ export const PROJECTS = [
         desc: "Landing page for traveling company. The project included animation and advanced CSS features.",
         img: 'http://up419.siz.co.il/up2/jhlwycdynjzj.jpg',
         github: 'https://github.com/dorlevi121/dorlevi121.github.io',
-        url: ''
+        url: 'https://dorlevi121.github.io/'
     },
 
     {

@@ -6,11 +6,12 @@
   height: 60vh;
   border: 1px solid #888;
   border-radius: 10px;
-  box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-height: 60%;
   overflow: auto;
-  background-color: rgba(59, 43, 43, 0.8);
+  background-color: rgba(216, 224, 222, 0.8);
   animation: open-modal-animation 1s ease-in-out;
+  
   @media (max-width: 600px) {
     width: 60vw;
     height: 55vh;
@@ -49,7 +50,6 @@
       @media (max-width: 600px) {
         font-size: 1rem;
       }
-      
     }
     & .Close {
       & a {
@@ -94,7 +94,7 @@
 
     & p {
       color: $primary-color;
-      font-weight: 100;
+      font-weight: 300;
     }
   }
 }

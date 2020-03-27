@@ -1,27 +1,66 @@
 @import "../../App.module.scss";
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
 
 .Home {
-  margin-top: 15%;
-  
+  margin-top: 10%;
+  position: relative;
+
   & .Name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     & p {
-      text-align: center;
-      @include primary-color;
-      letter-spacing: 8px;
-      font: 3rem "Roboto", sans-serif;
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 4em;
       font-weight: 800;
-      animation: text-animation 3s ease-in-out;
-      
+      color: rgba(255, 255, 255, 0.5);
+
+      &::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("https://as1.ftcdn.net/jpg/01/38/07/68/500_F_138076808_y4D6u52C27CvVUtmsXfGabrTXHfpKrk8.jpg");
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-repeat: repeat-x;
+        animation: wave 3s linear infinite;
+        transition: 0.8s;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &:hover::before {
+        width: 100%;
+        color: rgba(255, 255, 255, 0.1);
+      }
+
+      @keyframes wave {
+        0% {
+          background-position: 0px;
+        }
+        100% {
+          background-position: 100px;
+        }
+      }
+
       @media (max-width: 900px) {
         letter-spacing: 2px;
         font: 2rem "Roboto", sans-serif;
       }
     }
+  }
+
+  & .Line {
     & hr {
       margin-top: -3%;
       border: 0;
       height: 1.5px;
-      width: 40vw;
+      width: 35vw;
       background-image: linear-gradient(
         to right,
         rgba(255, 255, 255, 0),
@@ -34,7 +73,6 @@
         width: 80vw;
         height: 1.3px;
         animation: hr-animation 2s ease;
-        ;
       }
     }
   }
@@ -123,7 +161,7 @@
     & .githubIcon {
       margin-right: 1%;
       transition: all 0.3s ease-in-out;
-      color: $primary-color;
+      @include primary-color;
       &:hover {
         color: #333;
       }
@@ -134,7 +172,7 @@
     }
 
     & .linkedinIcon {
-      color: $primary-color;
+      @include primary-color;
 
       transition: all 0.3s ease-in-out;
       &:hover {

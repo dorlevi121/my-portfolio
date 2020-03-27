@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import contactStyle from "./contact.module.scss";
 import Modal from "../shared/modal";
 
-const Contact: React.FC = props => {
-  const [status, setStatus] = useState("");
+class Contact extends Component {
+  state = {
+    status: "",
+    name: "",
+    email: "",
+    message: ""
+  };
 
-  const submitForm = (ev: any) => {
+  submitForm = (ev: any) => {
     ev.preventDefault();
     const form = ev.target;
     const data = new FormData(form);
@@ -16,42 +21,79 @@ const Contact: React.FC = props => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         form.reset();
-        setStatus("SUCCESS");
+        this.setState({ status: "SUCCESS" });
       } else {
-        setStatus("ERROR");
+        this.setState({ status: "ERROR" });
       }
     };
     xhr.send(data);
   };
 
-  return (
-    <div className={contactStyle.Contact}>
-      <Modal title="mail me">
-        <div className={contactStyle.Form}>
+  handleChange = (e: any) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  render() {
+    return (
+      <div className={contactStyle.Contact}>
+        <Modal title="mail me">
           <form
-            onSubmit={submitForm}
+            onSubmit={this.submitForm}
             action="https://formspree.io/mbjkaqrj"
             method="POST"
           >
             <div className={contactStyle.FormGroup}>
-              <label>Name:</label>
-              <input type="name" name="name" placeholder="Full Name" required/>
+              <input
+                className={contactStyle.Question}
+                type="text"
+                name="name"
+                autoComplete="off"
+                onChange={this.handleChange}
+                value={this.state.name}
+                required
+              />
+              <label htmlFor="name">
+                <span>Name</span>
+              </label>
             </div>
+
             <div className={contactStyle.FormGroup}>
-              <label>Email:</label>
-              <input type="email" name="email" placeholder="Email" required/>
+              <input
+                className={contactStyle.Question}
+                type="email"
+                name="email"
+                autoComplete="off"
+                onChange={this.handleChange}
+                value={this.state.email}
+                required
+              />
+              <label htmlFor="email">
+                <span>Email</span>
+              </label>
             </div>
+
             <div className={contactStyle.FormGroup}>
-              <label>Message:</label>
-              <textarea id="msg" name="message" placeholder="Message" maxLength={400} required/>
+              <textarea
+                className={contactStyle.Question}
+                name="message"
+                onChange={this.handleChange}
+                value={this.state.message}
+                required
+              ></textarea>
+              <label htmlFor="message">
+                <span>Message</span>
+              </label>
             </div>
-            {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
-            {status === "ERROR" && <p>Ooops! There was an error.</p>}
+
+            <div className={contactStyle.Button}>
+              {this.state.status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+              {this.state.status === "ERROR" && <p>Ooops! There was an error.</p>}{" "}
+            </div>
           </form>
-        </div>
-      </Modal>
-    </div>
-  );
-};
+        </Modal>
+      </div>
+    );
+  }
+}
 
 export default Contact;

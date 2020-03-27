@@ -14,10 +14,11 @@ export default class Home extends Component {
     return (
       <div className={homeStyle.Home}>
         <div className={homeStyle.Name}>
-          <p>Dor Levi</p>
+          <p data-text="Dor Levi">Dor Levi</p>
+        </div>
+        <div className={homeStyle.Line}>
           <hr />
         </div>
-
         <div className={homeStyle.Title}>
           <p>Front-End Developer</p>
         </div>
