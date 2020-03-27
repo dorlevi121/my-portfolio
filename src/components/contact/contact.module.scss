@@ -2,17 +2,23 @@
 
 .Contact {
   @media (max-width: 600px) {
-    margin: 50% auto;
   }
 
   & form {
     margin-top: 5%;
+    @media (max-width: 600px) {
+      margin-top: 10%;
+    }
+
     & :nth-child(4) {
       margin-top: 3%;
     }
 
     & .FormGroup {
       margin-top: 5%;
+      @media (max-width: 600px) {
+        margin-top: 10%;
+      }
 
       & input,
       label,
@@ -45,6 +51,9 @@
         transition: padding-top 0.3s ease, margin-top 0.2s ease,
           box-shadow 0.3s ease;
         overflow: hidden;
+        @media (max-width: 600px) {
+          width: 60%;
+        }  
       }
 
       & textarea.Question {
@@ -135,6 +144,11 @@
         letter-spacing: 2px;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+
+        @media (max-width: 600px) {
+          padding: 8px 15px;
+          font-size: 0.6rem;
+        }  
       }
 
       & :hover {

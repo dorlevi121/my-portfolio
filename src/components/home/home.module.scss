@@ -32,6 +32,9 @@
         width: 0;
         overflow: hidden;
         white-space: nowrap;
+        @media (max-width: 900px) {
+          animation: waveMobile 3s linear infinite;
+        }
       }
 
       &:hover::before {
@@ -45,6 +48,15 @@
         }
         100% {
           background-position: 100px;
+        }
+      }
+
+      @keyframes waveMobile {
+        0% {
+          background-position: 0px;
+        }
+        100% {
+          background-position: 50px;
         }
       }
 

@@ -11,7 +11,7 @@
   overflow: auto;
   background-color: rgba(216, 224, 222, 0.8);
   animation: open-modal-animation 1s ease-in-out;
-  
+
   @media (max-width: 600px) {
     width: 60vw;
     height: 55vh;
@@ -20,14 +20,16 @@
   &::-webkit-scrollbar {
     width: 0.5em;
     height: 0.5em;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.8);
     }
   }
 
@@ -52,10 +54,11 @@
       }
     }
     & .Close {
+      
       & a {
         color: $primary-color;
         text-decoration: none;
-        font-size: 2.3rem;
+        font-size: 2.5rem;
         font-weight: 100;
         transition: all 0.3s ease-in-out;
         @media (max-width: 600px) {

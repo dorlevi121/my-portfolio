@@ -74,7 +74,23 @@
     margin-top: -2%;
   }
 
-  & a:hover {
-    color: #333;
+  & .Icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+
+    & .Github {
+      color: $primary-color;
+
+      & :hover {
+        color: #333;
+      }
+    }
+    & .Site {
+      color: $primary-color;
+      & :hover {
+        color: #7d3f98;
+      }
+    }
   }
 }

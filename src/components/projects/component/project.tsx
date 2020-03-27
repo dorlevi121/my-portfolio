@@ -1,8 +1,7 @@
 import React from "react";
 import projectStyle from "./project.module.scss";
 import { FaGithub } from "react-icons/fa";
-import { FiLink } from "react-icons/fi";
-
+import { FaLink } from "react-icons/fa";
 
 interface OwnProps {
   project: any;
@@ -15,10 +14,10 @@ const Project: React.FC<OwnProps> = props => {
         <p>{props.project.title}</p>
       </div>
       <div className={projectStyle.ImageANDTechnology}>
-      <div className={projectStyle.Image}>
-        <img src={props.project.img} alt={props.project.title} />
-      </div>
-      <div className={projectStyle.Technology}>
+        <div className={projectStyle.Image}>
+          <img src={props.project.img} alt={props.project.title} />
+        </div>
+        <div className={projectStyle.Technology}>
           <p>skills Acquired: </p>
 
           <ul>
@@ -29,29 +28,30 @@ const Project: React.FC<OwnProps> = props => {
         </div>
       </div>
 
-
       <div className={projectStyle.Description}>
         <p>{props.project.desc}</p>
       </div>
 
-      <a
-        className={projectStyle.Github}
-        href={props.project.github}
-        target="_blank"
-      >
-        <FaGithub size="1.5rem" color="white" />
-      </a>
-
-      {props.project.url !== '' && 
+      <div className={projectStyle.Icons}>
         <a
-        className={projectStyle.Github}
-        href={props.project.url}
-        target="_blank"
-        style={{marginLeft: '3%'}}
-      >
-        <FiLink size="1.5rem" color="white" />
-      </a>
-      }
+          className={projectStyle.Github}
+          href={props.project.github}
+          target="_blank"
+        >
+          <FaGithub size="1.5rem" />
+        </a>
+
+        {props.project.url !== "" && (
+          <a
+            className={projectStyle.Site}
+            href={props.project.url}
+            target="_blank"
+            style={{ marginLeft: "3%" }}
+          >
+            <FaLink size="1.3rem" />
+          </a>
+        )}
+      </div>
     </div>
   );
 };
