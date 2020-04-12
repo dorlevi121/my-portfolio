@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import homeStyle from "./home.module.scss";
 import { Link } from "react-router-dom";
-import cv from "../../assets/cv/dorCV.pdf";
+import cv from "../../assets/cv/DorCV.pdf";
 import { FaCode } from "react-icons/fa";
 import { FaFilePdf } from "react-icons/fa";
 import { FaAddressCard } from "react-icons/fa";

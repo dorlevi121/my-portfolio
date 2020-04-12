@@ -1,12 +1,12 @@
 export const PROJECTS = [
     {
-        id: 0,
-        title: "feedME",
-        technology: ['Android', 'Database'],
-        desc: "An Android mobile app that offers food recipes. the recipes offer based on user preferences selected in signing up for the app.",
-        img: 'http://i.picasion.com/pic89/b92385da3f1df4b41cc0da1feeb2883a.gif',
-        github: 'https://github.com/dorlevi121/feedME-Android-App',
-        url: ''
+        id: 7,
+        title: "Shopping List",
+        technology: ["ReactJS", "Redux", "TypeScript", "SASS", "Firebase"],
+        desc: "The app supports Hebrew and English, autocomplete, user authentication, mobile optimized.",
+        img: 'http://up419.siz.co.il/up3/tqyozn0fyltz.jpg',
+        github: 'https://github.com/dorlevi121/shooping-list',
+        url: 'https://myshoppinglist.netlify.com/'
     },
 
     {
@@ -60,7 +60,15 @@ export const PROJECTS = [
         github: 'https://github.com/dorlevi121/dorlevi121.github.io',
         url: 'https://dorlevi121.github.io/'
     },
-
+    {
+        id: 0,
+        title: "feedME",
+        technology: ['Android', 'Database'],
+        desc: "An Android mobile app that offers food recipes. the recipes offer based on user preferences selected in signing up for the app.",
+        img: 'http://i.picasion.com/pic89/b92385da3f1df4b41cc0da1feeb2883a.gif',
+        github: 'https://github.com/dorlevi121/feedME-Android-App',
+        url: ''
+    },
     {
         id: 6,
         title: "Tic Tac Toe Game ",
