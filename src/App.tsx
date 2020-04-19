@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import appStyle from "./App.module.scss";
 import Home from "./components/home/home";
-import { Route, Router, Switch } from "react-router";
+import { Route, Switch } from "react-router";
 import Contact from "./components/contact/contact";
 import About from "./components/about/about";
 import Projects from "./components/projects/projects";
+import ReactGa from 'react-ga';
 
 function App() {
+
+  useEffect(() => {
+    ReactGa.initialize('UA-158393931-1');
+    ReactGa.pageview(window.location.pathname + window.location.search);  
+  }, [])
   return (
     <div className={appStyle.App}>
       <Switch>

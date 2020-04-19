@@ -1,6 +1,7 @@
 import React, { useState, Component } from "react";
 import contactStyle from "./contact.module.scss";
 import Modal from "../shared/modal";
+import ReactGa from 'react-ga';
 
 class Contact extends Component {
   state = {
@@ -11,6 +12,10 @@ class Contact extends Component {
   };
 
   submitForm = (ev: any) => {
+    ReactGa.event({
+      category: 'Button',
+      action: 'Clicked on contact button'
+    })
     ev.preventDefault();
     const form = ev.target;
     const data = new FormData(form);
